@@ -91,7 +91,6 @@ amazon-sentiment-analysis/
    python main.py
    ```
 
-> 💡 Tip: Use a Jupyter notebook for interactive exploration (optional).
 
 ---
 
@@ -105,11 +104,16 @@ amazon-sentiment-analysis/
 
 ## 🖼️ Sample Visualizations
 
-> *(Add the following after generating plots in your script)*
+> ![Sentiment Distribution](https://github.com/user-attachments/assets/4693b8cb-ed8e-4980-b724-c9a4e6356ffd)
+> ![Sentiment vs Rating](https://github.com/user-attachments/assets/2222870d-e846-498c-a352-194f36cc492f)
+> ![Word Clouds](https://github.com/user-attachments/assets/95f1c31d-d1b5-4702-99ad-e3f49af44238)
 
-- **Sentiment Distribution Pie Chart**
-- **Subjectivity vs. Polarity Scatter Plot**
-- **Average Polarity by Star Rating (Bar Plot)**
+
+
+
+- **Sentiment Distribution**
+- **Sentiment vs. Rating**
+- **Word Clouds**
 
 > 🧩 Feel free to save these in an `/images` folder and embed here.
 
@@ -124,15 +128,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## 🙋‍♂️ Author
 
 **Vishal**  
-💼 [LinkedIn Profile (Add your URL here)](https://linkedin.com/)  
-📧 [Your Email (Optional)]  
+💼 https://www.linkedin.com/in/vishal-maurya-475981276/  
 
 ---
-
-## ⭐ Highlights for Resume
-
-```
-• Built an NLP-based sentiment analysis pipeline to classify 30,000+ Amazon reviews into positive, neutral, or negative classes using TextBlob.
-• Applied text cleaning, polarity scoring, and subjectivity analysis to uncover patterns in customer sentiment and product ratings.
-• Visualized insights through matplotlib and seaborn to support data-driven business decisions.
-```
