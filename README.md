@@ -1,125 +1,138 @@
 
-# 📊 Amazon Product Sentiment Analysis
+# 🛍️ Amazon Product Review Sentiment Analysis
 
-This project performs **sentiment analysis** on Amazon product reviews using Natural Language Processing (NLP) techniques. It includes data cleaning, exploratory data analysis, sentiment classification, and visualization with word clouds.
+This project performs **sentiment analysis** on Amazon consumer product reviews using Natural Language Processing (NLP) techniques. The goal is to understand customer feedback by classifying reviews as **positive, negative, or neutral**, and uncover patterns between sentiment and product ratings.
 
-> ✅ Ideal for showcasing data analysis and NLP skills on your resume or portfolio.
-
----
-
-## 🚀 Project Highlights
-
-- Cleaned and preprocessed over **30,000+** Amazon product reviews
-- Built a **sentiment labeling** pipeline using review ratings
-- Visualized review content using **positive/negative word clouds**
-- Exported clean data with sentiment labels for further use
+> 🔍 Ideal for showcasing data science and NLP skills in interviews or on your resume.
 
 ---
 
-## 🔧 Tech Stack
+## 📌 Table of Contents
 
-| Tool        | Use                          |
-|-------------|-------------------------------|
-| Python      | Core programming language     |
-| Pandas      | Data wrangling and manipulation |
-| Matplotlib & Seaborn | Visualization      |
-| WordCloud   | Word cloud generation         |
-| VS Code     | Code editor                   |
-| Git & GitHub| Version control and hosting   |
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [How to Run](#how-to-run)
+- [Results](#results)
+- [Sample Visualizations](#sample-visualizations)
+- [License](#license)
+
+---
+
+## 📖 Overview
+
+With the growth of e-commerce, businesses rely on customer reviews for feedback. This project analyzes such reviews using Python NLP tools to:
+- Clean and preprocess raw text
+- Perform sentiment scoring (using TextBlob)
+- Visualize polarity and subjectivity
+- Correlate sentiment with star ratings
 
 ---
 
 ## 📂 Dataset
 
-This project uses the **`Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products_May19.csv`** dataset.
+- **Source**: [Datafiniti Amazon Consumer Reviews Dataset](https://data.world/datafiniti/amazon-product-reviews)
+- **File**: `Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products_May19.csv`
+- **Note**: The full dataset is excluded from this repo due to size constraints. A sample file can be used for testing.
 
-> ⚠️ **Note:** Due to GitHub's 100MB file size limit, the dataset is not included in this repository.
+---
 
-### 🔽 How to Get the Data:
-1. Download the dataset from your original source or trusted platforms like:
-   - [Kaggle](https://www.kaggle.com/)
-   - [Datafiniti](https://data.world/datafiniti/)
-2. Save it in the root directory of the project, at the same level as `main.py`.
+## ⚙️ Technologies Used
+
+| Tool/Library      | Purpose                          |
+|------------------|----------------------------------|
+| Python           | Core programming language        |
+| Pandas           | Data loading and manipulation    |
+| TextBlob         | Sentiment analysis (NLP)         |
+| Matplotlib       | Visualization                    |
+| Seaborn          | Enhanced plots and styling       |
+| re (Regex)       | Text cleaning                    |
+| Jupyter / VS Code| Development and testing          |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```plaintext
 amazon-sentiment-analysis/
-│
-├── main.py                             # Main analysis script
-├── cleaned_amazon_reviews_with_sentiment.csv  # Output file with sentiment labels
-├── Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products_May19.csv  # Original dataset (not uploaded)
-├── requirements.txt                   # Required libraries
-├── README.md                          # Project documentation
-└── .gitignore                         # Files to ignore during git push
+├── data/                             # Raw or sample data files (not committed)
+├── main.py                          # Main sentiment analysis script
+├── cleaned_amazon_reviews.csv       # Processed data file (optional)
+├── requirements.txt                 # Python dependencies
+├── README.md                        # This file
+├── .gitignore                       # Files/folders ignored by Git
+└── sample_outputs/                  # (Optional) Saved plots or results
 ```
-
----
-
-## 🧪 Key Steps Performed
-
-1. **Loaded and explored** raw review data
-2. **Cleaned** text (lowercasing, removing punctuation, stopwords, etc.)
-3. **Created sentiment labels** using review rating:
-   - Ratings ≥ 4 → Positive
-   - Ratings ≤ 2 → Negative
-   - Rating = 3 → Neutral (optional)
-4. **Generated word clouds** for positive and negative reviews
-5. **Exported** cleaned and labeled dataset as CSV
-
----
-
-## 📈 Visual Output
-
-- **Positive Word Cloud**
-- **Negative Word Cloud**
-
-These visualizations reveal the most frequent terms used in each sentiment category, helping to understand customer behavior.
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone this repo:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/amazon-sentiment-analysis.git
+   git clone https://github.com/recklessguy/amazon-sentiment-analysis.git
    cd amazon-sentiment-analysis
    ```
 
-2. Install dependencies:
+2. **Create a virtual environment (optional but recommended):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Place the dataset in the project folder.
-
-4. Run the script:
+4. **Run the script:**
    ```bash
    python main.py
    ```
 
----
-
-## 💡 Future Improvements
-
-- Train a machine learning model to predict sentiment from text
-- Deploy using Streamlit or Flask for live prediction
-- Integrate other product categories for broader insight
+> 💡 Tip: Use a Jupyter notebook for interactive exploration (optional).
 
 ---
 
-## 🧑‍💼 About the Author
+## 📊 Results
 
-**Vishal** – Aspiring Data Analyst with hands-on experience in Python, data wrangling, and storytelling using visualizations.
-
----
-
-## 📬 Contact
-
-- **LinkedIn**: https://www.linkedin.com/in/vishal-maurya-475981276/
+- Reviews are classified as **Positive**, **Negative**, or **Neutral** based on polarity score.
+- Average polarity and subjectivity by star rating are calculated.
+- Cleaned and labeled data can be used for further machine learning or dashboarding.
 
 ---
 
-## ⭐️ If you found this helpful, give it a star!
+## 🖼️ Sample Visualizations
+
+> *(Add the following after generating plots in your script)*
+
+- **Sentiment Distribution Pie Chart**
+- **Subjectivity vs. Polarity Scatter Plot**
+- **Average Polarity by Star Rating (Bar Plot)**
+
+> 🧩 Feel free to save these in an `/images` folder and embed here.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+**Vishal**  
+💼 [LinkedIn Profile (Add your URL here)](https://linkedin.com/)  
+📧 [Your Email (Optional)]  
+
+---
+
+## ⭐ Highlights for Resume
+
+```
+• Built an NLP-based sentiment analysis pipeline to classify 30,000+ Amazon reviews into positive, neutral, or negative classes using TextBlob.
+• Applied text cleaning, polarity scoring, and subjectivity analysis to uncover patterns in customer sentiment and product ratings.
+• Visualized insights through matplotlib and seaborn to support data-driven business decisions.
+```
